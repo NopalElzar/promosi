@@ -8,10 +8,12 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f8eae9; /* Menambahkan background hitam pada halaman utama */
+    color: black; /* Mengubah teks menjadi warna putih agar terlihat jelas di latar belakang hitam */
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #ffc207;
     color: white;
     text-align: center;
     padding: 1.5rem;
@@ -24,7 +26,7 @@ header h1 {
 nav ul {
     display: flex;
     justify-content: center;
-    background-color: #333;
+    background-color: #60332d;
     list-style-type: none;
 }
 
@@ -40,7 +42,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    background-color: #60332d;
 }
 
 section {
@@ -49,33 +51,118 @@ section {
 }
 
 #home {
-    background-color: #f4f4f4;
+    background-color: #7e93a6; /* Sesuaikan warna agar tampilan lebih konsisten */
     text-align: center;
 }
 
 #services {
     display: flex;
     justify-content: space-around;
-    background-color: #eee;
+    background-color: #222; /* Warna gelap untuk konsistensi */
 }
 
 .service {
     width: 30%;
-    background: white;
     padding: 1.5rem;
     border: 1px solid #ddd;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 #contact {
-    background-color: #f4f4f4;
+    background-color: #7e93a6;
     text-align: center;
 }
 
 footer {
     text-align: center;
-    background-color: #333;
+    background-color: #60332d;
     color: white;
     padding: 1rem;
     margin-top: 1rem;
+}
+
+/* Wrapper untuk memusatkan search bar di tengah halaman */
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Membuat tinggi wrapper 100% dari tinggi viewport */
+}
+
+/* Gaya untuk search-bar */
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    background-color: #ffc207;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Memberikan efek bayangan */
+}
+
+.search-bar input[type="text"],
+.search-bar input[type="date"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+.search-bar button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0033cc;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-bar button:hover {
+    background-color: #0022aa;
+}
+
+
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.catalog-item {
+    margin: 20px;
+    width: 200px;
+    height: 300px;
+    background-color: #60332d;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.catalog-item img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px 10px 0 0;
+}
+
+.catalog-item h2 {
+    margin-top: 0;
+}
+
+.catalog-item p {
+    margin-bottom: 20px;
+}
+
+.catalog-item button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #60332d;
+    color: #fff;
+    cursor: pointer;
+}
+
+.catalog-item button:hover {
+    background-color: #282828;
 }
