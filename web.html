@@ -31,21 +31,57 @@
         <p>Rental Kami berdiri sejak tahun 2023 dan memiliki berbagai jenis barang untuk disewakan, mulai dari alat elektronik, kendaraan, hingga peralatan pesta.</p>
     </section>
 
-    <section id="services">
-        <h2>Layanan Kami</h2>
-        <div class="service">
-            <h3>Rental Mobil</h3>
-            <p>Berbagai jenis mobil tersedia untuk kebutuhan Anda, mulai dari sedan hingga SUV.</p>
+    <div class="center-wrapper">
+        <div class="search-bar">
+            <input type="text" id="series-input" placeholder="Judul series atau nama karakter">
+            
+            <label for="pick-up-date">Tanggal Pengambilan:</label>
+            <input type="date" id="pick-up-date" onchange="updateDropOffDate()">
+            
+            <label for="drop-off-date">Tanggal Pengembalian:</label>
+            <input type="date" id="drop-off-date" readonly>
+            
+            <button onclick="search()">Search</button>
         </div>
-        <div class="service">
-            <h3>Rental Kamera</h3>
-            <p>Kami menyediakan berbagai kamera untuk mendukung aktivitas fotografi Anda.</p>
+    </div>
+    
+    <script>
+        function updateDropOffDate() {
+            const pickUpDateInput = document.getElementById("pick-up-date");
+            const dropOffDateInput = document.getElementById("drop-off-date");
+    
+            if (pickUpDateInput.value) {
+                const pickUpDate = new Date(pickUpDateInput.value);
+                const dropOffDate = new Date(pickUpDate);
+                dropOffDate.setDate(pickUpDate.getDate() + 3); // Set drop-off date to 3 days after pick-up date
+    
+                dropOffDateInput.value = dropOffDate.toISOString().split('T')[0];
+            } else {
+                dropOffDateInput.value = "";
+            }
+        }
+    
+        function search() {
+            // Logic untuk proses pencarian berdasarkan input
+            alert("Pencarian dilakukan dengan input: " + document.getElementById("series-input").value);
+        }
+    </script>
+    
+
+    <div class="catalog">
+        <div class="catalog-item">
+            <img src="cosplay1.jpg" alt="Cosplay 1">
+            <h2>Cosplay 1</h2>
+            <p>This is a description of Cosplay 1.</p>
+            <button>View Details</button>
         </div>
-        <div class="service">
-            <h3>Peralatan Pesta</h3>
-            <p>Peralatan pesta lengkap tersedia untuk acara-acara spesial Anda.</p>
+        <div class="catalog-item">
+            <img src="cosplay2.jpg" alt="Cosplay 2">
+            <h2>Cosplay 2</h2>
+            <p>This is a description of Cosplay 2.</p>
+            <button>View Details</button>
         </div>
-    </section>
+    </div>
 
     <section id="contact">
         <h2>Kontak Kami</h2>
