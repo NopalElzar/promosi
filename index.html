@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Rental Kami</h1>
+        <img src="logo.jpg" alt="Logo Rental Kami" class="logo">
         <p>Tempat terbaik untuk menyewa barang</p>
     </header>
 
@@ -34,16 +34,29 @@
     <div class="center-wrapper">
         <div class="search-bar">
             <input type="text" id="series-input" placeholder="Judul series atau nama karakter">
-            
-            <label for="pick-up-date">Tanggal Pengambilan:</label>
             <input type="date" id="pick-up-date" onchange="updateDropOffDate()">
-            
-            <label for="drop-off-date">Tanggal Pengembalian:</label>
             <input type="date" id="drop-off-date" readonly>
-            
             <button onclick="search()">Search</button>
         </div>
     </div>
+    
+    <div class="filters-wrapper">
+        <div class="filters">
+            <select id="size-filter">
+                <option value="all">Semua Ukuran</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+    
+            <select id="gender-filter">
+                <option value="all">Semua Gender</option>
+                <option value="male">Laki-Laki</option>
+                <option value="female">Perempuan</option>
+            </select>
+        </div>
+    </div>  
     
     <script>
         function updateDropOffDate() {
@@ -68,20 +81,30 @@
     </script>
     
 
-    <div class="catalog">
-        <div class="catalog-item">
-            <img src="cosplay1.jpg" alt="Cosplay 1">
-            <h2>Cosplay 1</h2>
-            <p>This is a description of Cosplay 1.</p>
-            <button>View Details</button>
-        </div>
-        <div class="catalog-item">
-            <img src="cosplay2.jpg" alt="Cosplay 2">
-            <h2>Cosplay 2</h2>
-            <p>This is a description of Cosplay 2.</p>
-            <button>View Details</button>
-        </div>
+    <div class="catalog-latest">
+        <h2>Katalog Terbaru</h2>
     </div>
+    
+    <div class="catalog">
+        <a href="Yor.html" class="catalog-item">
+            <img src="Yor.jpeg" alt="Yor Forger">
+            <h2>Rental cosplay Yor Forger</h2>
+            <p class="price">Rp 80,000 / 3 hari</p>
+            <p>Spy x Family</p>
+            <p>Size: M fit L <br> Includes: wig, acc, costume</p>
+        </a>
+    
+        <a href="Ryo.html" class="catalog-item">
+            <img src="Ryo.jpeg" alt="Ryo Yamada">
+            <h2>Rental cosplay Ryo Yamada</h2>
+            <p class="price">Rp 55,000 / 3 hari</p>
+            <p>Bocchi The Rock</p>
+            <p>Size: M fit L <br> Includes: wig, acc, set costume, stocking</p>
+        </a>
+    
+        
+    </div>
+    
 
     <section id="contact">
         <h2>Kontak Kami</h2>
