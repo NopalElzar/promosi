@@ -1,4 +1,3 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +7,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f8eae9; /* Menambahkan background hitam pada halaman utama */
-    color: black; /* Mengubah teks menjadi warna putih agar terlihat jelas di latar belakang hitam */
+    background-color: #f8eae9; 
+    color: black; 
 }
 
 header {
@@ -20,7 +19,7 @@ header {
 }
 
 header .logo {
-    max-width: 150px; /* Sesuaikan ukuran maksimum logo */
+    max-width: 150px; 
     height: auto;
 }
 
@@ -56,14 +55,14 @@ section {
 }
 
 #home {
-    background-color: #7e93a6; /* Sesuaikan warna agar tampilan lebih konsisten */
+    background-color: #7e93a6; 
     text-align: center;
 }
 
 #services {
     display: flex;
     justify-content: space-around;
-    background-color: #222; /* Warna gelap untuk konsistensi */
+    background-color: #222; 
 }
 
 .service {
@@ -86,16 +85,14 @@ footer {
     margin-top: 1rem;
 }
 
-/* Wrapper untuk memusatkan search bar di tengah halaman */
 .center-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 12vh; /* Kurangi tinggi agar jarak antar elemen lebih dekat */
-    margin-bottom: 10px; /* Tambahkan sedikit margin bawah untuk jarak */
+    height: 12vh; 
+    margin-bottom: 10px; 
 }
 
-/* Gaya untuk search-bar agar horizontal dan memiliki panjang tertentu */
 .search-bar {
     display: flex;
     gap: 10px;
