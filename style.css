@@ -125,19 +125,18 @@ footer {
     font-weight: bold;
 }
 
-/* Gaya untuk filter dropdown agar berdekatan, memiliki lebar yang sama, dan terpusat */
 .filters-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Buat agar menyesuaikan dengan lebar halaman */
+    width: 100%; 
 }
 
 .filters {
     display: flex;
     gap: 10px;
-    width: 700px; /* Sesuaikan lebar filter dengan search bar */
-    justify-content: space-between; /* Atur posisi elemen secara merata */
+    width: 700px; 
+    justify-content: space-between; 
 }
 
 .filters select {
