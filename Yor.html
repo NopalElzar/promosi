@@ -3,193 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rental Costume</title>
+    <title>Rental Kostum</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f6fa;
+            background-color: #ffe4e1;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
         }
-
-        .navbar {
-            background-color: #f8f9fa;
-            padding: 1rem;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
+            padding: 10px;
         }
-
-        .navbar img {
-            height: 40px;
-        }
-
-        .navbar a {
-            color: #6c757d;
-            text-decoration: none;
-            margin-left: 15px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        .header {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 1rem;
-        }
-
-        .subtitle {
-            color: #6c757d;
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-        }
-
-        .card {
+        .header-left {
             display: flex;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin-bottom: 1rem;
             align-items: center;
         }
-
-        .card img {
-            width: 100px;
-            height: 60px;
-            margin-right: 1rem;
+        .header-left img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
         }
-
-        .price {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #e74c3c;
-            margin-bottom: 1rem;
-        }
-
-        .details {
-            font-size: 0.9rem;
+        .header-left a {
+            text-decoration: none;
             color: #333;
-            margin-bottom: 1rem;
+            margin-right: 10px;
         }
-
-        .calendar {
-            margin-top: 1rem;
+        .header-right {
+            display: flex;
+            align-items: center;
         }
-
-        .calendar table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        .calendar th, .calendar td {
-            padding: 0.5rem;
-            color: #333;
-        }
-
-        .calendar td {
+        .header-right button {
+            background-color: #fff;
             border: 1px solid #ddd;
+            padding: 8px 15px;
+            margin-right: 10px;
+            cursor: pointer;
         }
-
-        .selected-date {
-            background-color: #e74c3c;
-            color: #fff;
-            border-radius: 50%;
+        .header-right button:hover {
+            background-color: #eee;
         }
-
-        .terms {
-            font-size: 0.9rem;
-            color: #333;
+        .content {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            margin-top: 20px;
         }
-
-        .terms a {
-            color: #e67e22;
-            text-decoration: none;
+        .kostum {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0,  0, 0.1);
+            flex: 1;
         }
-
-        .btn-primary {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: #e67e22;
-            color: #fff;
+        .kostum img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .footer {
+            margin-top: 20px;
             text-align: center;
-            border-radius: 4px;
-            text-decoration: none;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
-
-<div class="navbar">
-    <img src="https://via.placeholder.com/150x40" alt="Logo">
-    <div>
-        <a href="#">Download App</a>
-        <a href="#">Pusat Bantuan</a>
-        <a href="#">ID</a>
-        <a href="#" class="btn-primary">Login</a>
-        <a href="#" class="btn-primary">Register</a>
-    </div>
-</div>
-
-<div class="container">
-    <div class="header">Rental Costume</div>
-    <div class="subtitle">BANJARBARU • 10 Nov 2024 - 2 Nov 2024</div>
-
-    <div class="card">
-        <img src="https://via.placeholder.com/100x60" alt="Car Image">
-        <div>
-            <div class="details">TOYOTA NEW INNOVA</div>
-            <div class="details">
-                <span>5 Fit to M</span> • <span>Asuransi</span> • <span>2 koper</span> • <span>Pengemudi</span> • <span>Usia Kostum: > 1 tahun</span>
+    <div class="container">
+        <div class="header">
+            <div class="header-left">
+                <img src="logo.png" alt="Logo">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="header-right">
+                <button>Login</button>
+                <button>Sign Up</button>
             </div>
         </div>
+        <div class="content">
+            <div class="kostum">
+                <img src="kostum1.jpg" alt="Kostum 1">
+                <h3>Kostum 1</h3>
+                <p>Deskripsi Kostum 1</p>
+            </div>
+            <div class="kostum">
+                <img src="kostum2.jpg" alt="Kostum 2">
+                <h3>Kostum 2</h3>
+                <p>Deskripsi Kostum 2</p>
+            </div>
+            <div class="kostum">
+                <img src="kostum3.jpg" alt="Kostum 3">
+                <h3>Kostum 3</h3>
+                <p>Deskripsi Kostum 3</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; 2023 Rental Kostum. All rights reserved.</p>
+        </div>
     </div>
-
-    <div class="price">Rp 80.000 / 3 Hari</div>
-    <a href="#" class="btn-primary">Lanjut Pesan</a>
-
-    <div class="details">
-        <h3>Detail Kostum</h3>
-        <ul>
-            <li>Size: M</li>
-            <li>Wig Brand Mammei</li>
-            <li>ACC: Bando Kaos Kaki Sarung tangan Dress Anting</li>
-            <li>Add on: Wigcap +10k/pcs</li>
-        </ul>
-    </div>
-
-    <div class="calendar">
-        <h3>Desember 2024</h3>
-        <table>
-            <tr>
-                <th>Min</th><th>Sen</th><th>Sel</th><th>Rab</th><th>Kam</th><th>Jum</th><th>Sab</th>
-            </tr>
-            <tr>
-                <td></td><td></td><td></td><td></td><td></td><td></td><td class="selected-date">1</td>
-            </tr>
-            <!-- Calendar rows -->
-            <tr>
-                <td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
-            </tr>
-            <!-- Add more rows as needed -->
-        </table>
-    </div>
-
-    <div class="terms">
-        <h3>Syarat dan Ketentuan</h3>
-        <p>- Akun real/akun utama(akun utama cosplay milik sendiri)...</p>
-        <p><a href="#">Lihat selengkapnya disini</a></p>
-    </div>
-</div>
-
 </body>
 </html>
