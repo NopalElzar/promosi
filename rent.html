@@ -73,6 +73,77 @@
             margin-bottom: 10px;
         }
 
+        .center-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 12vh; /* Kurangi tinggi agar jarak antar elemen lebih dekat */
+            margin-bottom: 10px; /* Tambahkan sedikit margin bawah untuk jarak */
+        }
+        
+        /* Gaya untuk search-bar agar horizontal dan memiliki panjang tertentu */
+        .search-bar {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            width: 700px; /* Tentukan lebar tetap */
+            background-color: #ffc207;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 5px; /* Kurangi jarak antara search-bar dan filter */
+        }
+        
+        .search-bar input[type="text"],
+        .search-bar input[type="date"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+            flex: 1;
+        }
+        
+        .search-bar button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0033cc;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        /* Gaya untuk filter dropdown agar berdekatan, memiliki lebar yang sama, dan terpusat */
+        .filters-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; /* Buat agar menyesuaikan dengan lebar halaman */
+        }
+        
+        .filters {
+            display: flex;
+            gap: 10px;
+            width: 700px; /* Sesuaikan lebar filter dengan search bar */
+            justify-content: space-between; /* Atur posisi elemen secara merata */
+        }
+        
+        .filters select {
+            flex: 1;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #ffc207;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .search-bar button:hover {
+            background-color: #0022aa;
+        }
+
         .item-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -174,6 +245,53 @@
 
         <!-- Main Content -->
         <main class="main-content">
+            <div class="center-wrapper">
+        <div class="search-bar">
+            <input type="text" id="series-input" placeholder="Judul series atau nama karakter">
+            <input type="date" id="pick-up-date" onchange="updateDropOffDate()">
+            <input type="date" id="drop-off-date" readonly>
+            <button onclick="search()">Search</button>
+        </div>
+    </div>
+    
+    <div class="filters-wrapper">
+        <div class="filters">
+            <select id="size-filter">
+                <option value="all">Semua Ukuran</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+    
+            <select id="gender-filter">
+                <option value="all">Semua Gender</option>
+                <option value="male">Laki-Laki</option>
+                <option value="female">Perempuan</option>
+            </select>
+        </div>
+    </div>  
+    
+    <script>
+        function updateDropOffDate() {
+            const pickUpDateInput = document.getElementById("pick-up-date");
+            const dropOffDateInput = document.getElementById("drop-off-date");
+    
+            if (pickUpDateInput.value) {
+                const pickUpDate = new Date(pickUpDateInput.value);
+                const dropOffDate = new Date(pickUpDate);
+                dropOffDate.setDate(pickUpDate.getDate() + 3); // Set drop-off date to 3 days after pick-up date
+    
+                dropOffDateInput.value = dropOffDate.toISOString().split('T')[0];
+            } else {
+                dropOffDateInput.value = "";
+            }
+        }
+    
+        function search() {
+            alert("Pencarian dilakukan dengan input: " + document.getElementById("series-input").value);
+        }
+    </script>
             <h1>6352 items ditemukan</h1>
             <div class="item-grid">
                 <!-- Sample Item -->
@@ -193,6 +311,7 @@
                         <div class="item-title">Ryo Yamada</div>
                         <div class="item-details">Wig Manmei</div>
                         <div class="item-details">Bocchi The Rock</div>
+                        <div class="item-details">ㅤ</div>
                         <div class="price">Rp 55.000</div>
                     </a>
                 </div>
